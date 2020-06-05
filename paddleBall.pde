@@ -2,7 +2,7 @@
 
 
 
-noStroke();
+// noStroke();
 
 var paddleWidth = 100;
 
@@ -21,7 +21,20 @@ var ballY = 0;
 // true if ball is moving, false if ball is attached to paddle
 var ballMoving = false;
 
-var draw = function() {
+
+
+void setup() {
+    size(400, 400);
+    rectMode(CENTER_RADIUS);
+    ellipseMode(CENTER_RADIUS);
+    noStroke();
+    smooth();
+  //  ball_y = height/2;
+    // ball_x = 1;
+};
+
+
+void draw() {
     background(0, 108, 135);
     
     // draw the paddle
@@ -66,15 +79,15 @@ var draw = function() {
 
 // this function gets called automatically
 // when the mouse is clicked
-var mouseClicked = function() {
-    if (!ballMoving) {
-        // reset the ball speed
-        ballSpeedX = initialSpeedX;
-        ballSpeedY = initialSpeedY;
+// var mouseClicked = function() {
+ //   if (!ballMoving) {
+   //     // reset the ball speed
+     //   ballSpeedX = initialSpeedX;
+      //  ballSpeedY = initialSpeedY;
         
-        ballMoving = true;
-    }
-};
+       // ballMoving = true;
+   // }
+//};
 
 
 
